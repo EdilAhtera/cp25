@@ -1,0 +1,68 @@
+<!-- Header -->
+<header class="fixed top-0 left-0 w-full flex items-center justify-between px-6 py-1 z-50">
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+        <img src="https://raw.githubusercontent.com/EdilAhtera/compimedic/main/img/1721568418869.png" alt="Logo" class="h-14 w-auto">
+    </div>
+
+    <!-- Navigation (Desktop) -->
+    <nav class="hidden md:flex space-x-6 text-lg">
+        <a href="#home" class="hover:text-blue-600">Home</a>
+        <a href="#product" class="hover:text-blue-600">Product</a>
+        <a href="#find-store" class="hover:text-blue-600">Find Store</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+        <a href="#company" class="hover:text-blue-600">Company</a>
+    </nav>
+
+    <!-- Hamburger Menu (Mobile) -->
+    <button id="menu-btn" class="block md:hidden text-cyan-600 text-2xl">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-view-list" viewBox="0 0 16 16">
+  <path d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2m0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14"/>
+</svg>
+    </button>
+</header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-0 right-0 w-full h-full bg-white transform translate-x-full transition-transform duration-300 md:hidden z-50">
+        <button id="close-menu" class="absolute top-5 right-6 text-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-x text-red-600" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+</svg></button>
+        <nav class="flex text-cyan-600 font-semibold flex-col items-center justify-center space-y-6 h-full text-lg">
+            <a href="#home" class="hover:text-blue-600">Home</a>
+            <a href="#product" class="hover:text-blue-600">Product</a>
+            <a href="#find-store" class="hover:text-blue-600">Find Store</a>
+            <a href="#contact" class="hover:text-blue-600">Contact</a>
+            <a href="#company" class="hover:text-blue-600">Company</a>
+            <a href="#company" class="hover:text-blue-600">Partnership</a>
+            <a href="#company" class="hover:text-blue-600">Investor</a>
+        </nav>
+    </div>
+
+<script>
+  // Mendapatkan elemen header
+  const header = document.querySelector('header');
+
+  // Fungsi untuk memeriksa apakah halaman sudah discroll
+  window.onscroll = function() {
+    if (window.scrollY > 80) {  // Ubah angka 50 sesuai keinginanmu
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  };
+</script>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+    </script>
