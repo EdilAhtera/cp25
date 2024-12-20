@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="white">
+    <title>Compimedic Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<style> 
+
+    .bebas-neue-regular {
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.outfit-<uniquifier> {
+  font-family: "Outfit", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+/* Default header style - transparan */
+header {
+  transition: background-color 0.3s ease;
+}
+
+/* Header dengan background putih setelah scroll */
+header.scrolled {
+  background-color: rgba(255, 255, 255); /* header putih */
+
+}
+</style>
+
+<body class="outfit-<uniquifier>">
+
+<!-- Header -->
+<header class="fixed top-0 left-0 w-full flex items-center justify-between px-6 py-1 z-50">
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+        <img src="https://raw.githubusercontent.com/EdilAhtera/compimedic/main/img/1721568418869.png" alt="Logo" class="h-14 w-auto">
+    </div>
+
+    <!-- Navigation (Desktop) -->
+    <nav class="hidden md:flex space-x-6 text-lg">
+        <a href="#home" class="hover:text-blue-600">Home</a>
+        <a href="#product" class="hover:text-blue-600">Product</a>
+        <a href="#find-store" class="hover:text-blue-600">Find Store</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+        <a href="#company" class="hover:text-blue-600">Company</a>
+    </nav>
+
+    <!-- Hamburger Menu (Mobile) -->
+    <button id="menu-btn" class="block md:hidden text-cyan-600 text-2xl">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-view-list" viewBox="0 0 16 16">
+  <path d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2m0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14"/>
+</svg>
+    </button>
+</header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-0 right-0 w-full h-full bg-white transform translate-x-full transition-transform duration-300 md:hidden z-50">
+        <button id="close-menu" class="absolute top-5 right-6 text-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-x text-red-600" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+</svg></button>
+        <nav class="flex text-cyan-600 font-semibold flex-col items-center justify-center space-y-6 h-full text-lg">
+            <a href="#home" class="hover:text-blue-600">Home</a>
+            <a href="#product" class="hover:text-blue-600">Product</a>
+            <a href="#find-store" class="hover:text-blue-600">Find Store</a>
+            <a href="#contact" class="hover:text-blue-600">Contact</a>
+            <a href="#company" class="hover:text-blue-600">Company</a>
+            <a href="#company" class="hover:text-blue-600">Partnership</a>
+            <a href="#company" class="hover:text-blue-600">Investor</a>
+        </nav>
+    </div>
+
+<script>
+  // Mendapatkan elemen header
+  const header = document.querySelector('header');
+
+  // Fungsi untuk memeriksa apakah halaman sudah discroll
+  window.onscroll = function() {
+    if (window.scrollY > 80) {  // Ubah angka 50 sesuai keinginanmu
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  };
+</script>
+
+<!-- homepage 1-->
+<div class="bg-blue-600 hidden mt-16 text-white flex flex-col md:flex-row items-center md:items-start p-6 md:p-12">
+  <!-- Text Section -->
+  <div class="bg-white text-blue-900 p-6 md:p-12 rounded-lg md:max-w-md">
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">
+      State Street Alpha: Taking the industry by storm
+    </h1>
+    <p class="text-sm md:text-base leading-relaxed mb-6">
+      Over the last five years, we’ve built the industry’s only end-to-end
+      solution that delivers incomparable insights from data across all asset
+      classes. John Plansky, head of State Street Alpha®, discusses our
+      groundbreaking platform, where we’ve been and where we’re going.
+    </p>
+    <div class="flex justify-center md:justify-start space-x-2">
+      <button class="bg-blue-600 text-white px-6 py-2 rounded font-medium hover:bg-blue-700">
+        Learn more
+      </button>
+      <button class="bg-blue-600 text-white px-6 py-2 rounded font-medium hover:bg-blue-700">
+        Contact us
+      </button>
+    </div>
+  </div>
+  <!-- Decorative Section -->
+  <div class="hidden md:block flex-1">
+    <img
+      src="path-to-your-image.jpg"
+      alt="Decorative Image"
+      class="w-full h-auto"
+    />
+  </div>
+</div>
+
+<!-- homepage -->
+<section id="homepage" class="relative bg-gray-100 h-full md:h-screen">
+    <div class="absolute inset-0">
+        <img src="https://www.arch2o.com/wp-content/uploads/2019/03/Arch2O-new-hospital-tower-rush-university-medical-center-perkins-will-55-1009x1600.jpg" 
+             alt="Background Image" class="w-full h-full object-cover">
+    </div>
+    <div class="relative flex flex-col justify-center items-center text-center px-4 py-8 space-y-4 h-auto md:flex-row md:justify-between md:text-left md:h-full">
+        <!-- Background Transparan Putih dengan Efek Blur -->
+        <div class="absolute inset-0 bg-gray-700 bg-opacity-30 backdrop-blur-sm"></div>
+
+        <div class="w-full py-24 px-4 md:w-2/3 md:px-20 text-left relative z-10">
+            <h1 class="text-4xl md:text-5xl bebas-neue-regular font-bold text-white">
+                Best medical equipment distributor
+            </h1>
+            <p class="text-base md:text-lg mt-2 text-white">
+                Your trusted partner
+            </p>
+            <div class="flex flex-row mt-4 space-x-4 md:justify-start md:space-x-4">
+                <a href="#store" class="border-white border-[1px] text-white text-center rounded-md px-6 py-2">
+                    Store
+                </a>
+                <a href="#contact-sales" 
+                   class="border-white border-[1px] text-white text-center hover:text-white rounded-md px-6 py-2 flex items-center justify-center">
+                    Contact Sales
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right ml-2" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Gambar Karakter -->
+        <div class="hidden md:block md:ml-auto md:mr-0 relative z-10">
+            <img src="https://raw.githubusercontent.com/EdilAhtera/compimedic/main/img/1722616949956.png" 
+                 alt="Feature Image" class="h-auto w-72 md:w-96">
+        </div>
+    </div>
+</section>
+
+<div
+    x-data="{}"
+    x-init="$nextTick(() => {
+        let ul = $refs.logos;
+        ul.insertAdjacentHTML('afterend', ul.outerHTML);
+        ul.nextSibling.setAttribute('aria-hidden', 'true');
+    })"
+    class="w-full inline-flex py-8 bg-white flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,white_0,_black_128px,_black_calc(100%-128px),white_100%)]"
+>
+    <ul x-ref="logos" class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+        <li>
+            <img src="https://lh6.googleusercontent.com/proxy/rVkWccqJWinHMMKO6Z72BWHHth5y3yb2S3DAvWyfaSy6K2uz2Sa5CRGeLrrhSK7nHUEHRGOKpeojJ9z76bZlfg" alt="" style="height: 52px; width: auto;" />
+        </li>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8dVJLDw2CU6IwWSkB8oqhKfb4xupPs2ot_g&s" alt="omron Logo" style="height: 20px; width: auto;" />
+        </li>
+        <li>
+            <img src="https://www.onemed.co.id/images/onemed2.png" alt="onemed Logo" style="height: 26px; width: auto;" />
+        </li>
+        <li>
+            <img src="https://www.beurerindonesia.id/wp-content/uploads/2023/03/BEURER_Logo.png" alt="BEURER_Logo.png" style="height: 36px; width: auto;" />
+        </li>
+        <li>
+            <img src="https://www.bistos.co.kr/wp-content/uploads/2023/08/00.logo-bistos-1.png" alt="bistos Logo" style="height: 26px; width: auto;">
+        </li>
+        <li>
+            <img src="https://onehealth.id/wp-content/uploads/elementor/thumbs/cropped-onh-qrwvesduai16rmhufnp0abogvx4qp3ok77ecugr0nm.png" alt="Gambar" style="height: 26px; width: auto;">
+        </li>
+        <li>
+            <img src="https://onehealth.id/wp-content/uploads/elementor/thumbs/cropped-onh-qrwvesduai16rmhufnp0abogvx4qp3ok77ecugr0nm.png" alt="Gambar" style="height: 20px; width: auto;">
+        </li>
+        <li>
+            <img src="./sass.svg" alt="Sass" />
+        </li>
+    </ul>                
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    inter: ['Inter', 'sans-serif'],
+                },
+                animation: {
+                    'infinite-scroll': 'infinite-scroll 25s linear infinite',
+                },
+                keyframes: {
+                    'infinite-scroll': {
+                        from: { transform: 'translateX(0)' },
+                        to: { transform: 'translateX(-100%)' },
+                    }
+                }                    
+            },
+        },
+    };
+</script>
+
+
+<div class="flex flex-col py-6 px-6 md:px-40 md:flex-row justify-between items-start">
+    <!-- Judul -->
+    <h2 class="text-left text-cyan-600 text-2xl font-bold mb-2 md:text-5xl md:mb-0">Compimedic Solutions<p class="text-gray-500">PT Dil Healthcare Indonesia</p></h2>
+    
+    <!-- Deskripsi -->
+    <div class="flex flex-col pt-6 md:w-1/2">
+        <p class="text-left text-gray-600 mb-2">PT Dil Healthcare Indonesia, also known by the brand name Compimedic Solutions, is a leading medical device distributor in Indonesia. As a healthcare solution provider, the company focuses on distributing high-quality medical products from trusted global manufacturing brands. With a commitment to the best service and innovation in the healthcare sector, Compimedic Solutions continues to strive to meet the needs of the Indonesian market with medical device products that meet international standards, as well as providing reliable technical support and customer service to hospitals, clinics, and other healthcare facilities throughout Indonesia.</p>
+<!-- Tombol Read More -->
+<a href="#" class="text-cyan-600 mt-2 flex items-center">
+    Read More
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right ml-1" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+</svg>
+</a>
+    </div>
+</div>
+
+
+<!-- Categories -->
+<section class="py-8 bg-white">
+    <div class="flex flex-wrap justify-center gap-2">
+        <button class="border rounded-full px-4 py-1 text-sm transition-colors duration-300 hover:bg-[#2596be] hover:text-white active:bg-[#2596be] active:text-white">Bandages</button>
+        <button class="border rounded-full px-4 py-1 text-sm transition-colors duration-300 hover:bg-[#2596be] hover:text-white active:bg-[#2596be] active:text-white">Blood Pressure Monitor</button>
+        <button class="border rounded-full px-4 py-1 text-sm transition-colors duration-300 hover:bg-[#2596be] hover:text-white active:bg-[#2596be] active:text-white">Defibrillator</button>
+        <button class="border rounded-full px-4 py-1 text-sm transition-colors duration-300 hover:bg-[#2596be] hover:text-white active:bg-[#2596be] active:text-white">ECG Machine</button>
+        <button class="border rounded-full px-4 py-1 text-sm transition-colors duration-300 hover:bg-[#2596be] hover:text-white active:bg-[#2596be] active:text-white">Face Mask</button>
+        <button class="border rounded-full px-4 py-1 text-sm transition-colors duration-300 hover:bg-[#2596be] hover:text-white active:bg-[#2596be] active:text-white">First Aid Kit</button>
+        <button class="border rounded-full px-4 py-1 text-sm transition-colors duration-300 hover:bg-[#2596be] hover:text-white active:bg-[#2596be] active:text-white">Gloves</button>
+        <button class="border rounded-full px-4 py-1 text-sm transition-colors duration-300 hover:bg-[#2596be] hover:text-white active:bg-[#2596be] active:text-white">Nebulizer</button>
+        <button class="border rounded-full px-4 py-1 text-sm transition-colors duration-300 hover:bg-[#2596be] hover:text-white active:bg-[#2596be] active:text-white">Oximeter</button>
+        <button class="border rounded-full px-4 py-1 text-sm transition-colors duration-300 hover:bg-[#2596be] hover:text-white active:bg-[#2596be] active:text-white">Scalpel</button>
+        <button class="border rounded-full px-4 py-1 text-sm transition-colors duration-300 hover:bg-[#2596be] hover:text-white active:bg-[#2596be] active:text-white">Sterilizer</button>
+        <button class="border rounded-full px-4 py-1 text-sm transition-colors duration-300 hover:bg-[#2596be] hover:text-white active:bg-[#2596be] active:text-white">Stethoscope</button>
+        <button class="border rounded-full px-4 py-1 text-sm transition-colors duration-300 hover:bg-[#2596be] hover:text-white active:bg-[#2596be] active:text-white">Surgical Gown</button>
+        <button class="border rounded-full px-4 py-1 text-sm transition-colors duration-300 hover:bg-[#2596be] hover:text-white active:bg-[#2596be] active:text-white">Surgical Tools</button>
+        <button class="border rounded-full px-4 py-1 text-sm transition-colors duration-300 hover:bg-[#2596be] hover:text-white active:bg-[#2596be] active:text-white">Syringe</button>
+        <button class="border rounded-full px-4 py-1 text-sm transition-colors duration-300 hover:bg-[#2596be] hover:text-white active:bg-[#2596be] active:text-white">Thermometer</button>
+        <button class="border rounded-full px-4 py-1 text-sm transition-colors duration-300 hover:bg-[#2596be] hover:text-white active:bg-[#2596be] active:text-white">Ultrasound</button>
+    </div>
+</section>
+
+
+
+
+<!-- card -->
+<div class="bg-[#3494bc] py-8 px-0 md:px-6 md:px-12">
+  <!-- Wrapper keseluruhan -->
+  <div class="flex flex-col md:flex-row items-center md:items-start">
+    <!-- Konten di sebelah kanan -->
+    <div class="w-full md:w-1/2">
+      <!-- Judul "Our vision" -->
+      <h2 class="text-white px-6 text-2xl md:text-3xl font-bold mb-4 text-center md:text-left">
+        PT Dil Healthcare Indonesia
+      </h2>
+      <!-- Gambar untuk mode mobile di bawah judul dan di atas deskripsi -->
+      <div class="mb-6 md:hidden">
+        <img
+          src="IMG_20241215_173000.jpg"
+          alt="Discussion Image"
+          class="w-screen"
+        />
+      </div>
+      <!-- Subjudul -->
+      <h3 class="text-white px-6 text-xl md:text-2xl font-bold mb-2">
+        Delivering Reliable Solutions for Modern Healthcare
+      </h3> 
+      <!-- Deskripsi -->
+      <p class="text-white px-6 text-sm md:text-base leading-relaxed mb-6">
+        We uncover ways for the world’s institutional investors to adapt, grow, and
+        prepare for tomorrow. By leveraging our expertise and leading-edge tech,
+        our clients are better equipped to deliver optimal performance.
+      </p>     
+      <!-- Tombol tanpa kotak dengan teks dan panah -->
+      <div>
+        <a href="/about-us" class="bg-transparent px-6 text-white font-semibold hover:text-cyan-300 flex items-center">
+          Read more
+          <!-- Tanda panah ke atas -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right ml-1" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <!-- Gambar di sebelah kanan (hanya untuk mode desktop) -->
+    <div class="hidden md:block md:ml-8 md:w-1/2">
+      <img
+        src="path-to-your-image.jpg"
+        alt="Discussion Image"
+        class="rounded-md shadow-md w-full"
+      />
+    </div>
+  </div>
+</div>
+
+<!-- card -->
+<div class="bg-[#3494bc] py-8 px-0 md:px-6 md:px-12">
+  <!-- Wrapper keseluruhan -->
+  <div class="flex flex-col md:flex-row items-center md:items-start">
+    <!-- Konten di sebelah kanan -->
+    <div class="w-full md:w-1/2">
+      <!-- Judul "Our vision" -->
+      <h2 class="text-white px-6 text-2xl md:text-3xl font-bold mb-4 text-center md:text-left">
+        Our Vision & Mission
+      </h2>
+      <!-- Gambar untuk mode mobile di bawah judul dan di atas deskripsi -->
+      <div class="mb-6 md:hidden">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqb2QEVQf18P9s1mQIlvMPbjW73hBK36tKRgIMXBu7eRtj4zXntAU_G6U&s=10"
+          alt="Discussion Image"
+          class="w-screen"
+        />
+      </div>
+      <!-- Subjudul -->
+      <h3 class="text-white px-6 text-xl md:text-2xl font-bold mb-2">
+        Reimagining finance with resilience and insight
+      </h3> 
+      <!-- Deskripsi -->
+      <p class="text-white px-6 text-sm md:text-base leading-relaxed mb-6">
+        We uncover ways for the world’s institutional investors to adapt, grow, and
+        prepare for tomorrow. By leveraging our expertise and leading-edge tech,
+        our clients are better equipped to deliver optimal performance.
+      </p>     
+      <!-- Tombol tanpa kotak dengan teks dan panah -->
+      <div>
+        <a href="/visi-misi" class="bg-transparent px-6 text-white font-semibold hover:text-cyan-300 flex items-center">
+          Read more
+          <!-- Tanda panah ke atas -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right ml-1" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <!-- Gambar di sebelah kanan (hanya untuk mode desktop) -->
+    <div class="hidden md:block md:ml-8 md:w-1/2">
+      <img
+        src="path-to-your-image.jpg"
+        alt="Discussion Image"
+        class="rounded-md shadow-md w-full"
+      />
+    </div>
+  </div>
+</div>
+
+<!-- Wrapper keseluruhan card -->
+<div class="py-8 px-6 md:px-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Card 1 -->
+    <div class="flex flex-col items-start">
+      <!-- Judul Card 1 -->
+      <h2 class="text-cyan-600 text-2xl font-bold mb-4 text-left">
+        Our Partner  
+      </h2>
+      <!-- Subjudul Card 1 -->
+      <h3 class="text-cyan-600 text-xl font-bold mb-2">
+        We partner with several medical manufacturers
+      </h3> 
+      <!-- Deskripsi Card 1 -->
+      <p class="text-black text-sm md:text-base leading-relaxed mb-6">
+        We uncover ways for the world’s institutional investors to adapt, grow, and
+        prepare for tomorrow. By leveraging our expertise and leading-edge tech,
+        our clients are better equipped to deliver optimal performance.
+      </p>     
+      <!-- Tombol Card 1 -->
+      <div>
+        <button class="bg-transparent text-cyan-600 font-semibold hover:text-cyan-300 flex items-center">
+          Learn more
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right ml-1" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="flex flex-col items-start">
+      <!-- Judul Card 2 -->
+      <h2 class="text-cyan-600 text-2xl font-bold mb-4 text-left">
+        Humanity
+      </h2>
+      <!-- Subjudul Card 2 -->
+      <h3 class="text-cyan-600 text-xl font-bold mb-2">
+        We participate in humanitarian missions
+      </h3> 
+      <!-- Deskripsi Card 2 -->
+      <p class="text-black text-sm md:text-base leading-relaxed mb-6">
+        By embracing sustainability and technology, we empower businesses to 
+        navigate challenges and seize new opportunities for a brighter future.
+      </p>     
+      <!-- Tombol Card 2 -->
+      <div>
+        <button class="bg-transparent text-cyan-600 font-semibold hover:text-cyan-300 flex items-center">
+          Learn more
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right ml-1" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Subscribe Section -->
+<section id="subscribe" class="py-16 hidden px-6 bg-white">
+    <div class="container mx-auto">
+        <!-- Newsletter Card -->
+        <div class="bg-[#3494bc] rounded-3xl shadow-lg shadow-cyan-600/30 p-8 max-w-3xl mx-auto text-center">
+            <!-- Title -->
+            <h2 class="text-2xl font-bold text-white">Subscribe to Our Newsletter</h2>
+            <p class="text-white text-md mt-4">Stay updated with the latest product information and promotions delivered straight to your inbox.</p>
+
+            <!-- Subscribe Form -->
+            <div class="mt-8">
+                <form action="#" method="POST" class="flex items-center justify-center">
+                    <div class="flex w-full md:w-96 border border-gray-300 bg-white overflow-hidden rounded-full">
+                        <input type="email" name="email" placeholder="Enter your email address" required 
+                            class="px-4 py-2 text-xs mad:text-md w-full focus:outline-none rounded-full">
+                        <button type="submit" 
+                            class="px-6 py-2 bg-neutral-100 text-[#3494bc] text-sm font-semibold hover:bg-neutral-300 transition rounded-r-full">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-[#3494bc] text-gray-800 py-8">
+  <div class="container mx-auto px-6 lg:px-8">
+    <!-- Desktop View -->
+    <div class="hidden md:flex md:px-24 text-white justify-between items-start">
+      <!-- Left Side -->
+      <div>
+        <img src="logo.png" alt="AKP Logo" class="h-8 mb-4">    
+      </div>
+
+      <!-- Left of Left -->
+      <div>
+        <ul class="space-y-2">
+          <li>About Us</li>
+          <li>What We Do</li>
+          <li>Operations</li>
+          <li>CSR</li>
+        </ul>
+      </div>
+    
+      <!-- Middle -->
+      <div>
+        <ul class="space-y-2">
+          <li>Media & News</li>
+          <li>Careers</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+
+      <!-- Right Side -->
+      <div>
+        <h3 class="font-semibold mb-2">Keep in Touch</h3>
+        <p class="mb-2">Follow PT Dil Healthcare Indonesia to stay up to date</p>
+        <a href="#" class="block w-8">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+<!-- Mobile View -->
+<div class="md:hidden text-left">
+  <!-- Logo -->
+  <div class="mb-4">
+    <img src="Picsart_24-12-11_12-54-43-435.png" alt="AKP Logo" class="h-14">
+  </div>
+
+  <!-- Links -->
+  <div class="text-white flex flex-wrap gap-6 text-left py-2 mb-10">
+    <ul class="space-y-1">
+      <li>About Us</li>
+      <li>What We Do</li>
+      <li>Operations</li>
+      <li>CSR</li>
+    </ul>
+    <ul class="space-y-1">
+      <li>Media & News</li>
+      <li>Career</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+
+  <!-- Keep in Touch -->
+  <div class="text-white">
+    <h3 class="font-semibold">Keep in Touch</h3>
+    <p class="text-sm mb-2">Follow PT Dil Healthcare Indonesia to stay up to date</p>
+    <div class="flex items-center">
+      <a href="#" class="inline-block w-8">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+    <!-- Footer Bottom -->
+    <div class="text-center text-white mt-6 border-t pt-4 text-sm">
+      <p>&copy; 2024 <a class="font-bold">PT Dil Healthcare Indonesia</a> All right reserved</p>
+      <ul class="flex justify-center space-x-4 mt-2">
+        <li><a href="/p/terms-conditions" class="hover:text-gray-500">Terms & Conditions</a></li>
+        <li><a href="/p/privacy-policy" class="hover:text-gray-500">Privacy Policy</a></li>
+        <li><a href="/p/faq" class="hover:text-gray-500">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+    </script>
+
+</body>
+</html>
